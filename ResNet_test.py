@@ -9,7 +9,7 @@ import numpy as np
 from scipy.signal import resample, find_peaks
 from pulse_sampler import PulseSampler
 from pulse_dataset import PulseDataset
-from NegPearsonLoss import NegPearson, NegPeaLoss
+from NegPearsonLoss import NegPearson
 from ResNet_model import generate_model
 from scipy.stats import pearsonr
 import heartpy as hp
@@ -81,7 +81,7 @@ for i in range(3, 30):
     model.eval()
     criterion = NegPearson()
     criterion2 = nn.MSELoss()
-    criterion3 = NegPeaLoss()
+
 
     criterion = criterion.cuda()
 

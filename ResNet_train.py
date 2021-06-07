@@ -3,16 +3,12 @@ import os
 import glob
 import time
 import torch
-
-import torch.nn as nn
 import torch.nn.parallel
 import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
 import torchvision.transforms as transforms
 from NegPearsonLoss import NegPearson
-# from PhysNet import PhysNet
-import torchvision.datasets as datasets
 import matplotlib.pyplot as plt
 import pulse_dataset
 
