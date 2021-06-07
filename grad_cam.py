@@ -14,7 +14,7 @@ from pulse_dataset import PulseDataset
 from scipy.stats import pearsonr
 import heartpy as hp
 
-from PhysNet import NegPearson
+from NegPearsonLoss import NegPearson
 
 from torchvision import utils
 

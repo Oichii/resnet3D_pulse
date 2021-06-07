@@ -3,13 +3,14 @@ import os
 import glob
 import time
 import torch
+
 import torch.nn as nn
 import torch.nn.parallel
 import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
 import torchvision.transforms as transforms
-from PhysNet import NegPearson
+from NegPearsonLoss import NegPearson
 # from PhysNet import PhysNet
 import torchvision.datasets as datasets
 import matplotlib.pyplot as plt
@@ -421,7 +422,7 @@ if __name__ == '__main__':
             'epoch': epoch + 1,
             'state_dict': model.state_dict(),
             'best_prec1': best_prec1,
-        }, is_best, filename=os.path.join(args.save_dir, 'transfer_3d_{}.tar'.format(epoch)))
+        }, is_best, filename=os.path.join(args.save_dir, 'save/ResNet_3d_{}.tar'.format(epoch)))
 
     plt.plot(loss_global)
     plt.title('average training loss')

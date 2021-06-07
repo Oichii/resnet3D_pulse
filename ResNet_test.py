@@ -9,7 +9,7 @@ import numpy as np
 from scipy.signal import resample, find_peaks
 from pulse_sampler import PulseSampler
 from pulse_dataset import PulseDataset
-from PhysNet import NegPearson, NegPeaLoss
+from NegPearsonLoss import NegPearson, NegPeaLoss
 from ResNet_model import generate_model
 from scipy.stats import pearsonr
 import heartpy as hp
